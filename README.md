@@ -38,10 +38,11 @@
 ### 命令行 profile（`dsh web` 等）
 
 ```bash
+git clone https://github.com/Suqs259/dsh-job-tracker.git
 dsh plugin --profile web add file:/绝对路径/dsh-job-tracker
-# 或安装已发布的包
-dsh plugin --profile web add dsh-job-tracker
 ```
+
+> 尚未发布到 npm。等发布后可直接 `dsh plugin --profile web add dsh-job-tracker`。
 
 npx 用户注意：`@deepseek-ai/dsh` 的版本号是预发布号，`npx -y @deepseek-ai/dsh` 会因 `*` 匹配不到而失败，需显式指定版本：
 
