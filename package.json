@@ -1,0 +1,46 @@
+{
+  "name": "dsh-job-tracker",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness plugin: slash commands (/job-stats, /job-list, /job-add) and a model-callable tool for a local job-tracker (campus recruiting application tracker, Flask + SQLite) deployment.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "job-tracker"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-commands": "*",
+    "@deepseek-ai/dsh-tools": "*"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Suqs259/dsh-job-tracker.git"
+  },
+  "homepage": "https://github.com/Suqs259/dsh-job-tracker#readme",
+  "bugs": {
+    "url": "https://github.com/Suqs259/dsh-job-tracker/issues"
+  },
+  "license": "MIT"
+}

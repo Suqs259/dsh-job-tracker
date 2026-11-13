@@ -1,0 +1,13 @@
+# dsh-job-tracker bundle patch: mount the job-tracker plugin into the profile.
+#
+# The row carries no config by default, so the plugin reads everything from the
+# environment of the process that launches dsh:
+#   DSH_JOB_TRACKER_URL       base URL       (default http://127.0.0.1:5000)
+#   DSH_JOB_TRACKER_USERNAME  login username (required)
+#   DSH_JOB_TRACKER_PASSWORD  login password (required)
+# Values written under `config:` below take precedence over the environment;
+# keep credentials in the environment, never in this file.
+- insert:
+    - id: job-tracker
+      name: 'dsh-job-tracker'
+      config: {}
